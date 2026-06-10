@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F3E5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kalkulator Biegacza"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#6200EE"
+            android:layout_marginBottom="16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:elevation="2dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. Podaj tempo (min/km)"
+                android:textStyle="bold"
+                android:textColor="#6200EE"
+                android:layout_marginBottom="8dp"/>
+
+            <EditText
+                android:id="@+id/etPaceMin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Minuty (np. 5)"
+                android:inputType="number"/>
+
+            <EditText
+                android:id="@+id/etPaceSec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Sekundy (np. 30)"
+                android:inputType="number"
+                android:layout_marginBottom="8dp"/>
+
+            <EditText
+                android:id="@+id/etCustomDistance1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Własny dystans w km (opcjonalnie)"
+                android:inputType="numberDecimal"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/btnCalcFromPace"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Oblicz z tempa"
+                android:backgroundTint="#6200EE"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:elevation="2dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2. Podaj prędkość (km/h)"
+                android:textStyle="bold"
+                android:textColor="#6200EE"
+                android:layout_marginBottom="8dp"/>
+
+            <EditText
+                android:id="@+id/etSpeed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Prędkość np. 12.5"
+                android:inputType="numberDecimal"
+                android:layout_marginBottom="8dp"/>
+
+            <EditText
+                android:id="@+id/etCustomDistance2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Własny dystans w km (opcjonalnie)"
+                android:inputType="numberDecimal"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/btnCalcFromSpeed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Oblicz z prędkości"
+                android:backgroundTint="#6200EE"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:elevation="2dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3. Wyznacz wymagane tempo i prędkość"
+                android:textStyle="bold"
+                android:textColor="#6200EE"
+                android:layout_marginBottom="8dp"/>
+
+            <EditText
+                android:id="@+id/etTargetDistance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Dystans w km (np. 5)"
+                android:inputType="numberDecimal"/>
+
+            <EditText
+                android:id="@+id/etTargetTimeMin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Docelowy czas w minutach (np. 20)"
+                android:inputType="number"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/btnCalcRequired"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Oblicz wymagane parametry"
+                android:backgroundTint="#6200EE"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#F3E5F5"
+            android:padding="16dp"
+            android:elevation="2dp">
+
+            <TextView
+                android:id="@+id/tvResults"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Wprowadź dane i kliknij odpowiedni przycisk."
+                android:textSize="15sp"
+                android:textColor="#212121"
+                android:lineSpacingMultiplier="1.2"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
