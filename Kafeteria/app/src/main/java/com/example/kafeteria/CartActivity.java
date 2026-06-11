@@ -25,13 +25,11 @@ public class CartActivity extends AppCompatActivity {
         Button btnOrder = findViewById(R.id.btnOrder);
 
         List<CartItem> cartItems = CartManager.getInstance().getItems();
-        List<String> displayList = new ArrayList<>();
-        
-        for (CartItem ci : cartItems) {
-            displayList.add(ci.getItem().getName() + " x" + ci.getQuantity() + " - " + ci.getItem().getDetails2());
-        }
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, displayList);
+        CartAdapter adapter = new CartAdapter(this, cartItems, () -> {
+            double total = CartManager.getInstance().getTotalPrice();
+            tvCartTotal.setText(String.format("Łączna kwota: %.2f PLN", total));
+        });
         lvCartItems.setAdapter(adapter);
 
         double total = CartManager.getInstance().getTotalPrice();
